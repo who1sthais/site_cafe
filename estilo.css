@@ -35,12 +35,50 @@ a{
 .a-menu:hover, .a-menu:active{
 	color: #FFF;
 }
-main, #pag-beneficios, #pag-modalidades, #pag-treinos, #pag-agendamentos{
+main, #pag-saches, #pag-modalidades, #pag-treinos, #pag-agendamentos{
 	padding: 70px;
 }
 
 main{
 	background-color: #FFF;
+}
+#texto-img{
+	float: left;
+	width: 100%;
+	display: flex;
+}
+#texto1{
+	height: 60%;
+}
+#texto-img a{
+	text-align: end;
+	height: 40%;
+}
+.img-texto1{
+	width: 40%;
+	align-items: right;
+	margin: 3px;
+}
+#texto-img2{
+	float: left;
+	width: 100%;
+	display: flex;
+}
+#texto2{
+	height: 60%;
+}
+#texto-img2 a{
+	text-align: end;
+	height: 40%;
+}
+.img-texto2{
+	padding: 4px;
+	height:40%;
+	align-items: right;
+}
+#fonte{
+	text-align: end;
+	font-size: 1.0em;
 }
 
 h1, h3{
@@ -70,12 +108,19 @@ h2{
 	font-size: 3em;
 	text-align: left;
 }
-#pag-beneficios{
-	background-color: #d7ccc8;
+#pag-saches{
+	background-color: #FFF;
 
 }
-#pag-beneficios h2, #pag-beneficios p{
-	color: #FFF;
+#pag-saches ol,li,ul{
+	color: #5d4037;
+
+}
+#pag-saches li{
+	color: #5d4037;
+}
+#pag-saches h2, #pag-saches p{
+	color: #5d4037;
 	margin-bottom: 20px;
 }
 
@@ -134,21 +179,20 @@ li{
 h3{
 	font-size: 2em;
 }
+#pag-contatos div p{
+	text-align: right;
+	font-size: 1.0em;
+}
 
-#pag-treinos{
+#pag-contatos{
 	background-color: #FFF;
 }
-#pag-treinos p{
+#pag-contatos p{
 	text-align: center;
 	margin-bottom: 10px;
 }
-#container-treinos{
-	display: flex;
 
-}
-.coluna-treinos{
-	padding: 40px;
-}
+
 
 .container-img{
 	margin-top: 40px;
