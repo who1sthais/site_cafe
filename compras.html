@@ -25,13 +25,14 @@
 			</nav>
 					
 		
-		<section id="pag-agendamentos">
-			<h1>Agendamento</h1>
+		<section id="pag-pagamentos">
+			<h1>Compras</h1>
 
 
 			<p>Agende uma aula experimental grátis!</p>
 
 			<form name="" method="Post" action="">
+				<p>Dados de Identificação</p>
 				
 				<label for="nome">Nome:</label>
 				
@@ -41,74 +42,100 @@
 				
 				<input id="email" type="email" name="email" placeholder="nomeusuario@email.com" />				
 
-				<label for="senha">Senha</label>
+				<label for="senha">CPF</label>
 				
-				<input id="senha" type="password" name="senha" placeholder="Somente Números" />
+				<input type="text" name="cpf"pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="999.999.999-99">
 				
 				<label for="celular">Celular</label>
 				
 				<input id="celular" type="tel" name="celular" placeholder="(99)99999-9999" pattern="^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$" />
 
-			<div id="data-hora-num">
-				<div>
-				<label for="data">Data</label>
-				<input id="data" type="date" name="data" />
-				</div>
+				<label for="endereço">Endereço:</label>
+				<textarea id="endereço"cols="50" rows="4">	
+				</textarea>	
 
-				<div>
-				<label for="hora">Hora</label>
-				<input id="hora" type="time" name="hora" />
-				</div>
+			</form>
+			<form>	
+				<p>Produtos</p>
+				<label for="saches">Máquinas</label>
 
-				<div>
-				<label for="aulas">Aulas</label>
-				<input id="aulas" type="number" name="aulas" min="1" max="10" step="1" />
-				</div>
-			</div>
-				
-
-				<label for="nivel">Nível</label>
-				<select id="nivel" name="nivel">
-					<option value="">Selecione o Nível</option>
-					<option value="iniciante">Iniciante</option>
-					<option value="basico">Básico</option>
-					<option value="intermediario">Intermediário</option>
-					<option value="avancado">Avançado</option>
+				<select id="maquinas" name="Máquinas">
+					<option value="">Selecione a máquina</option>
+					<option value="iniciante">Dulce Gusto Piccolo</option>
+					<option value="basico">Nespresso Inissia C40</option>
+					<option value="intermediario">Nespresso U C50P</option>
+					<option value="avancado">Senseo HD7811/96</option>
 				</select>
 
-				
+				<label for="saches">Sachês</label>
+				<select id="saches" name="saches">
+					<option value="">Selecione o sachê</option>
+					<option value="iniciante">Dulce Expresso</option>
+					<option value="basico">Dulce descafeínado</option>
+					<option value="intermediario">Senseo Clássico</option>
+					<option value="avancado">Senseo Intenso</option>
+					<option value="avancado">Nespresso Livanto</option>
+					<option value="avancado">Nespresso Ristretto</option>
+					<option value="avancado">Nespresso Vanilio</option>
+				</select>
 
+				<label for="Itens">Selecionados:</label>
+
+				<input id="limpar-selecionados" type="reset" name="limpar" value="Limpar" />
+
+				<textarea id="itens"cols="50" rows="4">	
+				</textarea>	
+
+				<label for="valor">Valor:</label>
+
+				<label for="valor" style="color: #000"></label>
+				<input style="width: 85px" type="price" class="price" name="quantidade">
+
+
+
+
+
+
+			</form>
+				
+			<form>
+				<p>Pagamento</p>
 				<fieldset>
-					<legend>Gênero</legend>
+
+					<legend>Forma de Pagamento</legend>
+
 					<input id="masc" type="radio" name="genero" value="masc"> 
-					<label for="masc" />Masculino</label></br>
+					<img src="img/visa.png">
+
+					<input id="masc" type="radio" name="genero" value="masc"> 
+					<img src="img/master.png">
+
+					<input id="masc" type="radio" name="genero" value="masc"> 
+					<img src="img/amex.png">
 					
-					<input id="fem" type="radio" name="genero" value="fem" /> 
-					<label for="fem">Feminino</label>
-				</fieldset>
-
-				
-
-				<fieldset>
-					<legend>Atividades</legend>
-					<input id="musc"type="checkbox" name="atividades" value="musculacao"/> 
-					<label for="musc">Musculação</label></br>
-					<input id="pila" type="checkbox" name="atividades" value="pilates"/>
-					<label for="pila">Pilates</label></br>
-					<input id="yoga" type="checkbox" name="atividades" value="yoga"/> 
-					<label for="yoga">Yoga</label></br>
-					<input id="corr" type="checkbox" name="atividades" value="corrida"/> 
-					<label for="corr">Corrida</label></br>
 					
 				</fieldset>
 
-				<label for="msg">Mensagem:</label>
-				<textarea id="msg"cols="50" rows="4">	
-				</textarea>				
+			<div id="main-container">
+			  <form id="register-form" action="">
+			    <div class="half-box1">
+			      <label for="cc">Número do cartão</label>
+			      <input type="text" name="cc" id="cc" placeholder="Numero do cartao" />
+			    </div>
+
+			    <div class="half-box2">
+			      <label for="">Data de validade:</label>
+			      <div>
+			        <input type="text" name="mes" id="mes" placeholder="MM" />
+			        <input type="text" name="ano" id="ano" placeholder="AAAA" />
+			      </div>
+			    </div>
+
+			</div>						
 
 			<div id="botoes-form">
-				<input type="submit" name="bt-agendar" value="AGENDAR" />
-				<input type="reset" name="bt-cancelar" value="CANCELAR" />
+				<input type="submit" name="enviar" value="Enviar" />
+				<input type="reset" name="limpar" value="Limpar" />
 			</div>
 			</form>
 		</section>
