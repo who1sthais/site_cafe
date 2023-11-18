@@ -12,10 +12,8 @@
 
 	</head>
 	<body>
-	<header>
-		<img id="img-topo" src="img/banner.jpg" alt="Uma imagem de um trem simbolizando o expresso do café" />
-	</header>
 
+		<header>
 			<nav>
 				<a class="a-menu" href="index.html">HISTÓRIA</a>
 				<a class="a-menu" href="saches.html">SACHES</a>
@@ -23,121 +21,120 @@
 				<a class="a-menu" href="compras.html">COMPRAS</a>
 				<a class="a-menu" href="maquinas.html">MÁQUINAS</a>
 			</nav>
+		</header>
 					
 		
 		<section id="pag-pagamentos">
 			<h1>Compras</h1>
 
-
-			<p>Agende uma aula experimental grátis!</p>
-
-			<form name="" method="Post" action="">
-				<p>Dados de Identificação</p>
-				
-				<label for="nome">Nome:</label>
-				
-				<input id=nome type="text" name="nome_completo" placeholder="Nome Completo" required autofocus />			
-
-				<label for="email">E-mail</label>
-				
-				<input id="email" type="email" name="email" placeholder="nomeusuario@email.com" />				
-
-				<label for="senha">CPF</label>
-				
-				<input type="text" name="cpf"pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="999.999.999-99">
-				
-				<label for="celular">Celular</label>
-				
-				<input id="celular" type="tel" name="celular" placeholder="(99)99999-9999" pattern="^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$" />
-
-				<label for="endereço">Endereço:</label>
-				<textarea id="endereço"cols="50" rows="4">	
-				</textarea>	
-
-			</form>
-			<form>	
-				<p>Produtos</p>
-				<label for="saches">Máquinas</label>
-
-				<select id="maquinas" name="Máquinas">
-					<option value="">Selecione a máquina</option>
-					<option value="iniciante">Dulce Gusto Piccolo</option>
-					<option value="basico">Nespresso Inissia C40</option>
-					<option value="intermediario">Nespresso U C50P</option>
-					<option value="avancado">Senseo HD7811/96</option>
-				</select>
-
-				<label for="saches">Sachês</label>
-				<select id="saches" name="saches">
-					<option value="">Selecione o sachê</option>
-					<option value="iniciante">Dulce Expresso</option>
-					<option value="basico">Dulce descafeínado</option>
-					<option value="intermediario">Senseo Clássico</option>
-					<option value="avancado">Senseo Intenso</option>
-					<option value="avancado">Nespresso Livanto</option>
-					<option value="avancado">Nespresso Ristretto</option>
-					<option value="avancado">Nespresso Vanilio</option>
-				</select>
-
-				<label for="Itens">Selecionados:</label>
-
-				<input id="limpar-selecionados" type="reset" name="limpar" value="Limpar" />
-
-				<textarea id="itens"cols="50" rows="4">	
-				</textarea>	
-
-				<label for="valor">Valor:</label>
-
-				<label for="valor" style="color: #000"></label>
-				<input style="width: 85px" type="price" class="price" name="quantidade">
-
-
-
-
-
-
-			</form>
-				
-			<form>
-				<p>Pagamento</p>
-				<fieldset>
-
-					<legend>Forma de Pagamento</legend>
-
-					<input id="masc" type="radio" name="genero" value="masc"> 
-					<img src="img/visa.png">
-
-					<input id="masc" type="radio" name="genero" value="masc"> 
-					<img src="img/master.png">
-
-					<input id="masc" type="radio" name="genero" value="masc"> 
-					<img src="img/amex.png">
+		<div id="card-compras">
+			<div id="primeiro-card">
+				<form name="" method="Post" action="">
+					<p>Dados de Identificação</p>
 					
+					<label for="nome">Nome:</label>
 					
-				</fieldset>
+					<input id=nome type="text" name="nome_completo" placeholder="Nome Completo" required autofocus />			
 
-			<div id="main-container">
-			  <form id="register-form" action="">
-			    <div class="half-box1">
-			      <label for="cc">Número do cartão</label>
-			      <input type="text" name="cc" id="cc" placeholder="Numero do cartao" />
-			    </div>
+					<label for="email">E-mail</label>
+					
+					<input id="email" type="email" name="email" placeholder="nomeusuario@email.com" />				
 
-			    <div class="half-box2">
-			      <label for="">Data de validade:</label>
-			      <div>
-			        <input type="text" name="mes" id="mes" placeholder="MM" />
-			        <input type="text" name="ano" id="ano" placeholder="AAAA" />
-			      </div>
-			    </div>
+					<label for="senha">CPF</label>
+					
+					<input type="text" name="cpf"pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="999.999.999-99">
+					
+					<label for="celular">Celular</label>
+					
+					<input id="celular" type="tel" name="celular" placeholder="(99)99999-9999" pattern="^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$" />
 
-			</div>						
-
-			<div id="botoes-form">
-				<input type="submit" name="enviar" value="Enviar" />
-				<input type="reset" name="limpar" value="Limpar" />
+					<label for="endereço">Endereço:</label>
+					<textarea id="endereço"cols="50" rows="4">	
+					</textarea>	
+				</form>
 			</div>
-			</form>
+			<div id="segundo-card">
+				<form>	
+					<p>Produtos</p>
+					<label for="saches">Máquinas</label>
+
+					<select id="maquinas" name="Máquinas">
+						<option value="">Selecione a máquina</option>
+						<option value="iniciante">Dulce Gusto Piccolo</option>
+						<option value="basico">Nespresso Inissia C40</option>
+						<option value="intermediario">Nespresso U C50P</option>
+						<option value="avancado">Senseo HD7811/96</option>
+					</select>
+
+					<label for="saches">Sachês</label>
+					<select id="saches" name="saches">
+						<option value="">Selecione o sachê</option>
+						<option value="iniciante">Dulce Expresso</option>
+						<option value="basico">Dulce descafeínado</option>
+						<option value="intermediario">Senseo Clássico</option>
+						<option value="avancado">Senseo Intenso</option>
+						<option value="avancado">Nespresso Livanto</option>
+						<option value="avancado">Nespresso Ristretto</option>
+						<option value="avancado">Nespresso Vanilio</option>
+					</select>
+
+					<label for="Itens">Selecionados:</label>
+
+					<input id="limpar-selecionados" type="reset" name="limpar" value="Limpar" />
+
+					<textarea id="itens"cols="50" rows="4">	
+					</textarea>	
+
+					<label for="valor">Valor:</label>
+
+					<label for="valor" style="color: #000"></label>
+					<input style="width: 85px" type="price" class="price" name="quantidade">
+				</form>
+			</div>
+			<div id="terceiro-card">
+				<form id="form-ultimo">
+					<p>Pagamento</p>
+					<fieldset>
+
+						<legend>Forma de Pagamento</legend>
+
+						<input id="masc" type="radio" name="genero" value="masc"> 
+						<img src="img/visa.png">
+
+						<input id="masc" type="radio" name="genero" value="masc"> 
+						<img src="img/master.png">
+
+						<input id="masc" type="radio" name="genero" value="masc"> 
+						<img src="img/amex.png">
+						
+						
+					</fieldset>
+
+				<div id="main-container">
+				<form id="register-form" action="">
+					<div class="half-box1">
+					<label for="cc">Número do cartão</label>
+					<input type="text" name="cc" id="cc" placeholder="Numero do cartao" />
+					</div>
+
+					<div class="half-box2">
+					<label for="">Data de validade:</label>
+					<div>
+						<input type="text" name="mes" id="mes" placeholder="MM" />
+						/
+						<input type="text" name="ano" id="ano" placeholder="AAAA" />
+					</div>
+					</div>
+
+				</div>						
+
+				<div id="botoes-form">
+					<input type="submit" name="enviar" value="Enviar" />
+					<input type="reset" name="limpar" value="Limpar" />
+				</div>
+				</form>
+			</div>
+		</div>
 		</section>
 
 		<footer>
