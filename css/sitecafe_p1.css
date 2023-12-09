@@ -135,8 +135,7 @@ h2{
 	background-color: #FFF;
 
 }
-#saches-meio{
-	
+#saches-meio{	
 }
 #img-saches{
 	width: 35%;
@@ -321,4 +320,8 @@ input[type="reset"]{
 }
 .fotos-maquinas-2{
 	width: 10%;
+}
+
+#pag-tabela{
+ text-align: center;
 }
