@@ -4,7 +4,9 @@
 
 
 
-body{}
+body{
+
+}
 
 
 header, #img-topo{
@@ -136,6 +138,7 @@ h2{
 
 }
 #saches-meio{	
+	
 }
 #img-saches{
 	width: 35%;
@@ -149,8 +152,8 @@ ol{
 	padding-left:41%;
 	
 }
-
 }
+
 #pag-saches h2, #pag-saches p{
 	color: #5d4037;
 	margin-bottom: 20px;
@@ -170,7 +173,7 @@ ul{
 	list-style-position: inside;
 }
 
-li{
+li,a{
 	color: #5d4037;
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.3em;
@@ -179,6 +182,32 @@ li{
 h3{
 	font-size: 2em;
 }
+
+/*Window.js*/
+
+.h2janela{
+	font-size: 300%;
+}
+.Pwindow{
+	font: Arial;
+	font-size: 150%;
+}
+
+#UL{
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.LI{
+	color: #5d4037;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.3em;
+	line-height: 2em;
+}
+
+
+
+
 #pag-contatos div p{
 	text-align: right;
 	font-size: 1.5em;
@@ -324,4 +353,9 @@ input[type="reset"]{
 
 #pag-tabela{
  text-align: center;
+}
+
+#spanErro{
+	color: red;
+	display: block;
 }

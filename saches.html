@@ -1,61 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<title>História do café</title>
-		<meta charset="utf-8">
-		<meta name="author" content="Thaís Silva">
-		<meta name="keywords" content="café, café expresso, história do café, vendas">
-		<meta name="description" content="A história do café e vendas de café">
-	
-		<link rel="stylesheet" type="text/css" href="./css/sitecafe_p1.css">
 
-		
-	</head>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/sitecafe_p1.css">
+
+    <title>Site Café Livre - História do Café</title>
+</head>
 
 <body>
-	<header>
-		<nav>
-			<a class="a-menu" href="index.html">HISTÓRIA</a>
-			<a class="a-menu" href="saches.html">SACHES</a>
-			<a class="a-menu" href="contato.html">CONTATO</a>
-			<a class="a-menu" href="compras.html">COMPRAS</a>
-			<a class="a-menu" href="maquinas.html">MÁQUINAS</a>
-		</nav>
-	</header>
-		<div id="saches-meio">
-				<section id="pag-saches">
 
-				<p><img id="img-saches" src="img/Logo_Pequeno.png"></p>
-				<h2>Sachês de Café Expresso</h2>
+<header>
+    <nav>
+        <a class="a-menu" href="index.html">HISTÓRIA</a>
+        <a class="a-menu" href="saches.html">SACHES</a>
+        <a class="a-menu" href="contato.html">CONTATO</a>
+        <a class="a-menu" href="compras.html">COMPRAS</a>
+        <a class="a-menu" href="maquinas.html">MÁQUINAS</a>
+    </nav>
+</header>
 
-				<div>
-					<ol>
-						<li>Dolce Gusto (Caixa 16 capsulas):
-							<ul>expresso 96g - R$24,00</ul>
-							<ul>expresso 96g - R$24,00</ul>
-						</li>
-						<li>Senseo (18 sachês):
-							<ul>expresso 120g - R$24,00</ul>
-							<ul>expresso 120g - R$24,00</ul>
-						</li>
-						<li>Nespresso (20 capsulas):
-							<ul>Livanto - R$ 35,00</ul>
-							<ul>Ristretto - R$ 42,00</ul>
-							<ul>Vanilio - R$ 46,00</ul>
-						</li>
-					</ol>
-				</div>
-				
+<div id="saches-meio">
+    <section id="pag-saches">
+        <p><img id="img-saches" src="img/Logo_Pequeno.png"></p>
+        <h2>Sachês de Café Expresso</h2>
 
-				</section>
-		</div>
+        <ol>
+			<li>
+				<a class="link-sache" href="#" onclick="openJanela('Dolce Gusto', '16', 'img/CapsulaDulceGusto2.jpg', 'Expresso 96g - R$24,00\nDescafeinado 96g - R$21,00')">
+					Dolce Gusto (Caixa 16 capsulas):
+				</a>
+			</li>
+			<li>
+				<a class="link-sache" href="#" onclick="openJanela('Senseo', '18', 'img/Senseo_Classico2.jpg', 'Clássico 120g - R$14,00\nIntenso 120g - R$14,00')">
+					Senseo (18 sachês):
+				</a>
+			</li>
+			<li>
+				<a class="link-sache" href="#" onclick="openJanela('Nespresso', '20', 'img/NespressoLivanto2.png', 'Livanto - R$35,00\nRistretto - R$42,00\nVanilio - R$46,00')">
+					Nespresso (20 capsulas):
+				</a>
+			</li>
+		</ol>
+		
+    </section>
+</div>
 
+<footer>
+    <p>Desenvolvido por <a href="https://www.linkedin.com/in/tha%C3%ADs-silva-24b78326b/" target="_blank">Thaís Silva</a></p>
+</footer>
 
-
-			<footer>
-				<p>Desenvolvido por <a href="https://www.linkedin.com/in/tha%C3%ADs-silva-24b78326b/" target="_blank">Thaís Silva</a> - 2023</p>
-			</footer>
-
-	<script src="./main.js" type="module"></script>
+<script src="./main.js" type="module"></script>
+<script src="./abrirJanela.js"></script>
 </body>
 </html>

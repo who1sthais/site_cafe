@@ -41,8 +41,9 @@
 					<input id="email" type="email" name="email" placeholder="nomeusuario@email.com" />				
 
 					<label for="senha">CPF</label>
-					
-					<input type="text" name="cpf"pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="999.999.999-99">
+
+					<input type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" oninput=" validarCPF(this.value)" placeholder="999.999.999-99" required/>
+					<span id="spanErro" style="color: red; " ></span>
 					
 					<label for="celular">Celular</label>
 					
@@ -54,41 +55,53 @@
 				</form>
 			</div>
 			<div id="segundo-card">
-				<form>	
+				<form id="prod">	
 					<p>Produtos</p>
 					<label for="saches">Máquinas</label>
-
-					<select id="maquinas" name="Máquinas">
-						<option value="">Selecione a máquina</option>
-						<option value="iniciante">Dulce Gusto Piccolo</option>
-						<option value="basico">Nespresso Inissia C40</option>
-						<option value="intermediario">Nespresso U C50P</option>
-						<option value="avancado">Senseo HD7811/96</option>
-					</select>
-
-					<label for="saches">Sachês</label>
-					<select id="saches" name="saches">
-						<option value="">Selecione o sachê</option>
-						<option value="iniciante">Dulce Expresso</option>
-						<option value="basico">Dulce descafeínado</option>
-						<option value="intermediario">Senseo Clássico</option>
-						<option value="avancado">Senseo Intenso</option>
-						<option value="avancado">Nespresso Livanto</option>
-						<option value="avancado">Nespresso Ristretto</option>
-						<option value="avancado">Nespresso Vanilio</option>
-					</select>
+					<label for="maquinas">Máquinas:</label>
+					<select id="maquinas" name="maquinas" onchange="adicionarOpcao('maquinas')">
+						<option value="null" disabled selected>---</option>
+						<optgroup label="Dulce gusto">
+							<option value="300">Piccolo</option>
+						</optgroup>
+						<optgroup label="Nespresso">
+							<option value="250">Inissia C40</option>
+							<option value="250">U C50</option>
+						</optgroup>
+						<optgroup label="Senseo">
+							<option value="250">HD7811/96</option>
+						</optgroup>
+					</select><br/>
+		
+				  <label for="saches">Sachês:</label>
+				  <select id="saches" name="saches" onchange="adicionarOpcao('saches')">
+						<option value="null" disabled selected>---</option>
+						<optgroup label="Dulce gusto">
+							<option value="24" id="exp">Expresso</option>
+							<option value="21">Descafeinado</option>
+						</optgroup>
+						<optgroup label="Nespresso">
+							<option value="25">Livantto</option>
+							<option value="42">Ristretto</option>
+							<option value="46">Vanilio</option>
+						</optgroup>
+						<optgroup label="Senseo">
+							<option value="14">Clássico</option>
+							<option value="14">Intenso</option>
+						</optgroup>
+				  </select><br/>
+				
 
 					<label for="Itens">Selecionados:</label>
 
 					<input id="limpar-selecionados" type="reset" name="limpar" value="Limpar" />
 
-					<textarea id="itens"cols="50" rows="4">	
-					</textarea>	
+					<textarea id="itens"></textarea>	
 
-					<label for="valor">Valor:</label>
+					<label for="val">Valor:</label>
 
 					<label for="valor" style="color: #000"></label>
-					<input style="width: 85px" type="price" class="price" name="quantidade">
+					<input style="width: 85px" type="price" class="price" name="quantidade" id="valor">
 				</form>
 			</div>
 			<div id="terceiro-card">
@@ -98,13 +111,13 @@
 
 						<legend>Forma de Pagamento</legend>
 
-						<input id="masc" type="radio" name="genero" value="masc"> 
+						<input id="visa" type="radio" name="genero" value="masc"> 
 						<img src="img/visa.png">
 
-						<input id="masc" type="radio" name="genero" value="masc"> 
+						<input id="master" type="radio" name="genero" value="masc"> 
 						<img src="img/master.png">
 
-						<input id="masc" type="radio" name="genero" value="masc"> 
+						<input id="amex" type="radio" name="genero" value="masc"> 
 						<img src="img/amex.png">
 						
 						
@@ -113,12 +126,11 @@
 				<div id="main-container">
 				<form id="register-form" action="">
 					<div class="half-box1">
-					<label for="cc">Número do cartão</label>
-					<input type="text" name="cc" id="cc" placeholder="Numero do cartao" />
+						<label for="cc">Número do cartão</label>
+						<input class="val" type="text" name="cc" id="cc" placeholder="Numero do cartao" pattern="[0-9]{12}" required onkeyup="verifBandeira()" />
 					</div>
-
 					<div class="half-box2">
-					<label for="">Data de validade:</label>
+						<label for="">Data de validade:</label>
 					<div>
 						<input type="text" name="mes" id="mes" placeholder="MM" />
 						/
@@ -133,6 +145,9 @@
 					<input type="reset" name="limpar" value="Limpar" />
 				</div>
 				</form>
+				<center>
+				<span id="erro-cartao" oninput=" verifBandeira(this.value)" style="color: red;"></span>
+				</center>
 			</div>
 		</div>
 		</section>
@@ -141,5 +156,9 @@
 				<p>Desenvolvido por <a href="https://www.linkedin.com/in/tha%C3%ADs-silva-24b78326b/" target="_blank">Thaís Silva</a> - 2023</p>
 		</footer>
 	<script src="./main.js" type="module"></script>
+	<script src="./validarCompra.js"></script>
+	<script src="./validarCPF.js"></script>
+	<script src="./validarCartao.js"></script>
+
 	</body>
 </html>
